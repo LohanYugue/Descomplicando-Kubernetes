@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: meu-deployment
+    web: duni
+    svc: uni
+  name: meu-deployment
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: meu-pod
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: meu-pod
+    spec:
+      containers:
+      - image: nginx:1.14.0
+        name: nginx
+        resources:
+          limits:
+            memory: 128Mi
+            cpu: 0.2
+          requests:
+            memory: 64Mi
+            cpu: 0.1
+  
