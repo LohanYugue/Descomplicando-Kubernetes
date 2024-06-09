@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2024-06-07T11:59:16Z"
+  labels:
+    app: nginx-https
+  name: nginx-secret
+  namespace: default
+  resourceVersion: "818"
+  uid: 1bf30f90-cca4-4c79-b988-49fec2d72bb9
+spec:
+  clusterIP: 10.43.153.88
+  clusterIPs:
+  - 10.43.153.88
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31056
+    port: 32400
+    protocol: TCP
+    targetPort: 443
+  selector:
+    app: nginx-https
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
