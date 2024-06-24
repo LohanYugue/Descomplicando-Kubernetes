@@ -13,3 +13,5 @@ day-07 = StatefulSet HeadLess Service & Os tipos de Service: ClusterIP, NodePort
 day-08 = Secrets & Configmaps
 
 day-10 = Prometheus
+
+day-11 = Ingress
