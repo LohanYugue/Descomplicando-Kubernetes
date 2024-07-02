@@ -15,3 +15,5 @@ day-08 = Secrets & Configmaps
 day-10 = Prometheus
 
 day-11 = Ingress
+
+day-12 = CertManager & LetsEncrypt, autenticação no ingress, affinitys e limits
