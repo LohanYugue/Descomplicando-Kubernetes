@@ -17,3 +17,7 @@ day-10 = Prometheus
 day-11 = Ingress
 
 day-12 = CertManager & LetsEncrypt, autenticação no ingress, affinitys e limits
+
+day-13 = Metrics Server, HPA e Locust
+
+day-14 = Kyverno, ClusterPolicy e Policy: Validate, Mutate, Generate
