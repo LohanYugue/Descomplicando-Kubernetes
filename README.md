@@ -21,3 +21,5 @@ day-12 = CertManager & LetsEncrypt, autenticação no ingress, affinitys e limit
 day-13 = Metrics Server, HPA e Locust
 
 day-14 = Kyverno, ClusterPolicy e Policy: Validate, Mutate, Generate
+
+day-15 = Taints, Tolerations, Affinity e AntiAffinity
