@@ -1,16 +1,20 @@
 apiVersion: kyverno.io/v1
 kind: ClusterPolicy
 metadata:
-  name: add-label-namespace
+  name: generate-configmap-for-namespace
 spec:
   rules:
-  - name: add-label-ns
-    match:
-      resources:
-        kinds:
-        - Namespace
-    mutate:
-      patchStrategicMerge:
-        metadata:
-          labels:
-            Jeferson: "Lindo_Demais"
+    - name: generate-namespace-configmap
+      match:
+        resources:
+          kinds:
+            - Namespace
+      generate:
+	      apiVersion: v1
+        kind: ConfigMap
+        name: default-configmap
+        namespace: "{{request.object.metadata.name}}"
+        data:
+          data:
+            key1: "value1"
+            key2: "value2"
